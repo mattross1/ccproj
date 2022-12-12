@@ -1,0 +1,10 @@
+{% for food in foodobj %}
+<h1>Favorite Foods</h1>
+<tr>
+    <td>{{ food.entry }}</td>
+    <td>{{ food.first }}</td>
+    <td>{{ food.last }}</td>
+    <td>{{ food.favorite }}</td>
+</tr>
+
+{% endfor %}

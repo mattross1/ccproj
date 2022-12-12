@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-w4%5-38h-8pmtgntw6c!0q@b$n=q+nhqajcp-4&xlnn&mea&jj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'appdj.apps.AppdjConfig',
 ]
 
 MIDDLEWARE = [
@@ -73,18 +74,14 @@ WSGI_APPLICATION = 'ccdj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-"""
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ccpostdb',
-        'USER': 'postgres',
-        'PASSWORD': 'fooddbpass1',
-        'HOST': 'ccdatabase.cqk0ictggxun.us-east-1.rds.amazonaws.com',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-"""
 
 
 
